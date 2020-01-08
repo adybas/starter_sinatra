@@ -1,0 +1,33 @@
+<!--detail page for a user-->
+<!DOCTYPE html>
+
+    <head>
+      <title>detail page</title>
+    </head>
+    <body>
+        <h1><%=@user.name %> Detail page </h1>
+        <h2>Karts driven By <%=@user.name%></h2>
+        <ul>
+        <%@user.kart.each do |kart|%>
+            <li> <a href = "/karts/<%=kart.id%>"> <%=kart.name%> </a> </li>
+            <%end%>
+        </ul>
+        <div>
+        <a href="/users">Back to user list</a>
+        <div>
+    <form method = "GET" action="/users/<%=@user.id%>/edit">
+
+        <input type ="submit" value ="Edit this user">
+    </form>
+        </div>
+        </div>
+
+        <form method="POST" action="/users/<%=@user.id%>">
+        
+        <input type="hidden" value = "DELETE" name="_method"> 
+        <input type="submit" value="Delete this user">
+
+    </form>
+
+    </body>
+</html>

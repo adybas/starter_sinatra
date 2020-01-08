@@ -20,7 +20,9 @@ kart1 = Kart.find_or_create_by(name:"Kart1", character_id: toad.id, user_id: ami
 kart2 = Kart.find_or_create_by(name:"Kart2", character_id: yoshi.id, user_id: anna.id)
 kart3 = Kart.find_or_create_by(name:"Kart3", character_id: peach.id, user_id: marija.id)
 kart4 = Kart.find_or_create_by(name:"Kart4", character_id: mario.id, user_id: jenny.id)
-
+kart5 = Kart.find_or_create_by(name:"Kart5", character_id: toad.id, user_id: amia.id)
+kart6 = Kart.find_or_create_by(name:"Kart6", character_id: toad.id, user_id: amia.id)
+kart7 = Kart.find_or_create_by(name:"Kart7", character_id: toad.id, user_id: amia.id)
 
 
 

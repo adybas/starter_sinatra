@@ -9,8 +9,8 @@
     <h1> All the karts</h1>
     <ul>
     <% @karts.each do |kart|%>
-        <li><%= kart.name %></li>
-        <% end %>
+        <li><a href = "/karts/<%=kart.id%>"><%= kart.name %></a></li>
+        <%end%>
        </ul>
     </body>
 </html>

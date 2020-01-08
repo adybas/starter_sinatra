@@ -7,6 +7,12 @@
     <body>
         <h1><%=@character.name %> Detail page </h1>
         <%= @character.bio%>
+        <h2> Kart for character</h2>
+        <ul>
+        <%@character.kart.each do |kart|%>
+            <li> <a href = "/karts/<%=kart.id%>"> <%=kart.name%> </a> </li>
+            <%end%>
+        </ul>
         <div>
         <a href="/characters">Back to character list</a>
         <div>

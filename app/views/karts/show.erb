@@ -1,0 +1,35 @@
+<!--detail page for a kart-->
+<!DOCTYPE html>
+
+    <head>
+      <title>detail page</title>
+    </head>
+    <body>
+    <h1><%=@kart.name %> Detail page </h1>
+    <h2> User Name</h2>
+        <ul>
+            <li> <a href ="/users/<%=@kart.user.id%>"><%=@kart.user.name%></a> </li>
+        </ul>
+        <h2>Character Name</h2>
+        <ul>
+        <li> <a href ="/characters/<%=@kart.character.id%>"><%=@kart.character.name%></a> </li>
+    </ul>
+        <div>
+        <a href="/karts">Back to kart list</a>
+        </div>
+    <!--<form method = "GET" action="/karts/<%=@kart.id%>/edit">-->
+
+    #     <input type ="submit" value ="Edit this kart">
+    # </form>
+    #     </div>
+    #     </div>
+
+    #     <form method="POST" action="/karts/<%=@kart.id%>">
+        
+    #     <input type="hidden" value = "DELETE" name="_method"> 
+    #     <input type="submit" value="Delete this kart">
+
+    # </form>
+
+    </body>
+</html>

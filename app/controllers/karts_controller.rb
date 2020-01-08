@@ -6,4 +6,10 @@ class KartsController < Sinatra::Base
         @karts = Kart.all
         erb :index
     end
+
+    get '/karts/:id' do 
+        @kart = Kart.find(params[:id])
+        # byebug
+        erb:show
+    end
 end
