@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+    <head>
+       
+        <title>Characters Index Page</title>
+     
+    </head>
+    <body>
+    <h1> All the characters</h1>
+    <ul>
+    <% @characters.each do |character| %>
+    <li> <a href ="/characters/<%=character.id%>"> <%= character.name %> </a> </li>
+    <% end %>
+    </ul>
+    <!-- making a button that allows user to make a new character-->
+    
+    <form method = "GET" action="/characters/new">
+        <input type ="submit" value ="Create a new character">
+    </form>
+    </body>
+</html>

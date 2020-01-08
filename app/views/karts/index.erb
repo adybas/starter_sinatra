@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+    <head>
+        
+        <title> Kart Index Page</title>
+      
+    </head>
+    <body>
+    <h1> All the karts</h1>
+    <ul>
+    <% @karts.each do |kart|%>
+        <li><%= kart.name %></li>
+        <% end %>
+       </ul>
+    </body>
+</html>

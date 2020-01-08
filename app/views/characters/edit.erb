@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+    <head>
+       
+        <title>editing a character</title>
+       
+    </head>
+    <body>
+    <h1> Edit this character </h1>
+    <form method="POST" action="/characters/<%=@character.id%>">
+
+     <input type="hidden" value = "PATCH" name="_method" >
+    <label> Name: <input type="text" value= "<%=@character.name%>" name="name"></label><br/>
+    <label> Bio: <input type="text" value= "<%=@character.bio%>" name="bio"></label><br/>
+
+    <input type="submit" value="Edit">
+
+</form>
+      
+    </body>
+</html>

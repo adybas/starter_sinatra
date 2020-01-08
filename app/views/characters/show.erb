@@ -1,0 +1,28 @@
+<!--detail page for a character-->
+<!DOCTYPE html>
+
+    <head>
+      <title>detail page</title>
+    </head>
+    <body>
+        <h1><%=@character.name %> Detail page </h1>
+        <%= @character.bio%>
+        <div>
+        <a href="/characters">Back to character list</a>
+        <div>
+    <form method = "GET" action="/characters/<%=@character.id%>/edit">
+
+        <input type ="submit" value ="Edit this character">
+    </form>
+        </div>
+        </div>
+
+        <form method="POST" action="/characters/<%=@character.id%>">
+        
+        <input type="hidden" value = "DELETE" name="_method"> 
+        <input type="submit" value="Delete this character">
+
+    </form>
+
+    </body>
+</html>
